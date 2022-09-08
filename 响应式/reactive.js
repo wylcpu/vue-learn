@@ -11,7 +11,7 @@ export function defineReactive(obj, key, value) {
             if(Dep.target) {
                 dep.depend()
             }
-            console.log('get:', value)
+            console.log('get:', value, dep)
             return value
         },
         set (newValue) {
